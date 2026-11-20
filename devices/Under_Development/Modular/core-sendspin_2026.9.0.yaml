@@ -1610,47 +1610,47 @@ image:
           id(sendspin_album_art_valid) = false;
       - component.update: main_display
 
-font:
-  - file:
-      type: gfonts
-      family: ${font_family}
-      weight: 300
-    id: font_request_response
-    size: 15
-    glyphsets:
-      - ${font_glyphsets}
-  - file:
-      type: gfonts
-      family: ${font_family}
-      weight: 300
-    id: font_battery
-    size: 14
-    glyphsets:
-      - ${font_glyphsets}
-  - file:
-      type: gfonts
-      family: Syne Mono
-      weight: 400
-    id: font_big_clock_mono
-    size: 42
-    glyphsets:
-      - ${font_glyphsets}
-  - file:
-      type: gfonts
-      family: ${font_family}
-      weight: 400
-    id: font_big_date
-    size: 22
-    glyphsets:
-      - ${font_glyphsets}
-  - file:
-      type: gfonts
-      family: Syne Mono
-      weight: 400
-    id: font_small_clock_mono
-    size: 24
-    glyphsets:
-      - ${font_glyphsets}
+# font:
+#   - file:
+#       type: gfonts
+#       family: ${font_family}
+#       weight: 300
+#     id: font_request_response
+#     size: 15
+#     glyphsets:
+#       - ${font_glyphsets}
+#   - file:
+#       type: gfonts
+#       family: ${font_family}
+#       weight: 300
+#     id: font_battery
+#     size: 14
+#     glyphsets:
+#       - ${font_glyphsets}
+#   - file:
+#       type: gfonts
+#       family: Syne Mono
+#       weight: 400
+#     id: font_big_clock_mono
+#     size: 42
+#     glyphsets:
+#       - ${font_glyphsets}
+#   - file:
+#       type: gfonts
+#       family: ${font_family}
+#       weight: 400
+#     id: font_big_date
+#     size: 22
+#     glyphsets:
+#       - ${font_glyphsets}
+#   - file:
+#       type: gfonts
+#       family: Syne Mono
+#       weight: 400
+#     id: font_small_clock_mono
+#     size: 24
+#     glyphsets:
+#       - ${font_glyphsets}
 
 text_sensor:
   - id: text_request
