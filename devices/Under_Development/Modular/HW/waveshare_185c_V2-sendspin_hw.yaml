@@ -211,6 +211,7 @@ media_player:
       - if:
           condition:
             - microphone.is_capturing:
+                id: box_mic
           then:
             - script.execute: stop_wake_word
             - if:
@@ -237,6 +238,7 @@ media_player:
       - if:
           condition:
             - microphone.is_capturing:
+                id: box_mic
           then:
             - script.execute: stop_wake_word
             - if:
