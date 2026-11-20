@@ -580,6 +580,7 @@ media_player:
       - if:
           condition:
             microphone.is_capturing:
+              id: box_mic
           then:
             - script.execute: stop_wake_word
     on_idle:
@@ -1227,6 +1228,7 @@ switch:
     entity_category: config
     on_turn_off:
       - microphone.unmute:
+          id: box_mic
       - script.execute:
           id: set_phase
           phase: ${voice_assist_idle_phase_id}
@@ -1234,6 +1236,7 @@ switch:
       - script.execute: draw_display
     on_turn_on:
       - microphone.mute:
+          id: box_mic
       - script.execute:
           id: set_phase
           phase: ${voice_assist_muted_phase_id}
