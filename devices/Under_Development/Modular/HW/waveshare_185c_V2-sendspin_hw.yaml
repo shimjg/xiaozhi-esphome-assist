@@ -71,21 +71,31 @@ switch:
     restore_mode: RESTORE_DEFAULT_ON
 
 microphone:
+  # I2S 버스와 ADC는 스피커와 같은 48kHz로 동작
   - platform: i2s_audio
-    id: box_mic
+    id: box_mic_i2s
     i2s_audio_id: i2s_audio_bus
     i2s_din_pin: GPIO39
     adc_type: external
     channel: right
     pdm: false
-    sample_rate: 16000
+    sample_rate: 48000
     bits_per_sample: 16bit
-
+  # Voice Assistant와 Micro Wake Word용 16kHz 입력
+  - platform: resampler
+    id: box_mic
+    microphone:
+      microphone: box_mic_i2s
+      channels: 0
+      bits_per_sample: 16
+    sample_rate: 16000
+    
 speaker:
   - platform: i2s_audio
     id: box_speaker
     i2s_audio_id: i2s_audio_bus
     sample_rate: 48000
+    bits_per_sample: 16bit
     i2s_dout_pin: GPIO47
     dac_type: external
     channel: mono
